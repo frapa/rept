@@ -24,13 +24,13 @@ to use it in a container.
 Install latest release with:
 
 ```bash
-> curl -o /usr/local/bin/rept -L https://github.com/frapa/rept/releases/latest/download/rept
+curl -o /usr/local/bin/rept -L https://github.com/frapa/rept/releases/latest/download/rept
 ```
 
 Then run it with:
 
 ```bash
-> rept <path/to/config.toml>
+rept <path/to/config.toml>
 ```
 
 For those in a hurry a simple template with two jobs:
