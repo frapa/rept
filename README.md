@@ -1,7 +1,7 @@
 # Rept
 
 A utility to run jobs periodically, like the classic `cron` but
-with better logging and more human friendly.
+with better logging and a little more human friendly.
 
 It's written in Go, so it's zero dependency and the executable can
 just be dropped and run. I also provide docker images if you want
@@ -20,6 +20,18 @@ to use it in a container.
 - Very low feature bloat (e.g. simple and dumb).
 
 ## Quick Start
+
+Install latest release with:
+
+```bash
+> curl -o /usr/local/bin/rept -L https://github.com/frapa/rept/releases/latest/download/rept
+```
+
+Then run it with:
+
+```bash
+> rept <path/to/config.toml>
+```
 
 For those in a hurry a simple template with two jobs:
 
