@@ -1,0 +1,8 @@
+[Options]
+LogPath = "/tmp/test.log"
+
+
+[Jobs.Backup]
+Cmd = "ls"
+Every = "Tuesday"
+At = "2:00"

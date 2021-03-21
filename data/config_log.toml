@@ -1,0 +1,12 @@
+[Options]
+LogPath = "/tmp/test.log"
+
+[Jobs.BackupDaily]
+Cmd = ["ls", "-lha"]
+Every = "Day"
+At = "2:15"
+
+[Jobs.BackupWeekly]
+Cmd = ["ls", "-lh"]
+Every = "Tuesday"
+At = "2:00"

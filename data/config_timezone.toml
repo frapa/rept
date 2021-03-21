@@ -1,0 +1,3 @@
+[Options]
+LogPath = "/tmp/test.log"
+Timezone = "CET"

@@ -1,0 +1,5 @@
+[Options]
+LogPath = "/tmp/test.log"
+
+[Jobs.Backup]
+Cmd = ["ls"]

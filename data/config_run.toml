@@ -1,0 +1,6 @@
+[Options]
+LogPath = "/tmp/test.log"
+
+[Jobs.Test]
+Cmd = ["ls", "-lha"]
+Every = "2 seconds"
