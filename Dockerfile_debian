@@ -1,0 +1,14 @@
+FROM golang:1.16-buster AS build
+
+COPY . /workdir
+RUN cd /workdir && go build -ldflags="-s -w"
+
+###
+
+FROM debian:buster
+
+RUN mkdir -p /etc/rept
+COPY --from=build /workdir/rept /usr/bin/rept
+
+ENTRYPOINT [ "/usr/bin/rept" ]
+CMD [ "/etc/rept/rept.toml" ]

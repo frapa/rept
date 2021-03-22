@@ -1,0 +1,14 @@
+FROM golang:1.16-buster AS build
+
+COPY . /workdir
+RUN cd /workdir && go build -ldflags="-s -w"
+
+###
+
+FROM scratch
+
+RUN mkdir /bin && mkdir -p /etc/rept && mkdir -p /var/log
+COPY --from=build /workdir/rept /bin/rept
+
+ENTRYPOINT [ "/bin/rept" ]
+CMD [ "/etc/rept/rept.toml" ]
