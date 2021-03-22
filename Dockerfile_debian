@@ -2,13 +2,17 @@ FROM golang:1.16-buster AS build
 
 COPY . /workdir
 RUN cd /workdir && go build -ldflags="-s -w"
+RUN mkdir /empty && chown 1000:1000 /empty && chmod 0755 /empty
 
 ###
 
 FROM debian:buster
 
-RUN mkdir -p /etc/rept
+COPY --from=build --chown=1000:1000 /empty /etc/rept
+COPY --from=build --chown=1000:1000 /empty /var/log/rept
 COPY --from=build /workdir/rept /usr/bin/rept
+
+USER 1000:1000
 
 ENTRYPOINT [ "/usr/bin/rept" ]
 CMD [ "/etc/rept/rept.toml" ]
