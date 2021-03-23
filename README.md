@@ -93,6 +93,21 @@ Timezone = "Local"
 # in your server local time.
 ```
 
+## Usage With Docker
+
+I provide two docker images with `rept` pre-installed:
+
+- `frapasa/rept:{version}` - A plain image with nothing
+  but the `rept` executable. Useful as base image if you
+  just need to periodically run a static executable.
+- `frapasa/rept:{version}-buster` - A more useful,
+  debian-based image that contain all the usual goodies.
+
+For both images, the configuration will be read from
+`/etc/rept/rept.toml`.
+
+To learn more, please visit [Docker Hub](https://hub.docker.com/repository/docker/frapasa/rept).
+
 ## Motivation
 
 My main complaint with cron it's that it's not transparent on whether
