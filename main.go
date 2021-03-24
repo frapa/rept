@@ -27,6 +27,10 @@ func main() {
 	err := Run(os.Args)
 	if err != nil {
 		fmt.Println(err)
+	} else {
+		for {
+			// keep running - otherwise we will have orphan goroutines
+		}
 	}
 }
 
