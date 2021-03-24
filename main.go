@@ -271,6 +271,7 @@ func Execute(jobName string, cmd []string) {
 	output, err := proc.Output()
 	if err != nil {
 		log.Printf("ERROR in job '%v':\n%v\n", jobName, err)
+		return
 	}
 
 	log.Printf("Job '%v' succeeded with output:\n%v\n", jobName, string(output))
