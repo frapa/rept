@@ -1,0 +1,11 @@
+[Unit]
+Description=rept periodic job runner
+
+[Service]
+Type=simple
+WorkingDirectory=/
+ExecStart=/usr/local/bin/rept /etc/rept/rept.toml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

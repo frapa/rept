@@ -33,6 +33,22 @@ Then run it with:
 rept <path/to/config.toml>
 ```
 
+If you want to run this as a systemd service (which means `rept` will be run
+automatically at boot and restarted if it crashes), you can run the following
+commands:
+
+```bash
+curl -o /etc/systemd/system/rept.service -L https://raw.githubusercontent.com/frapa/rept/main/rept.service
+systemctl daemon-reload
+systemctl enable rept.service
+systemctl start rept.service
+```
+
+The service file above will automatically read the configuration from
+`/etc/rept/rept.toml`. After changing the configuration file,
+you have to restart the service with `systemctl restart rept.service`
+for the changed to take effect.
+
 For those in a hurry a simple template with two jobs:
 
 ```toml
