@@ -30,6 +30,7 @@ func main() {
 	} else {
 		for {
 			// keep running - otherwise we will have orphan goroutines
+			time.Sleep(time.Hour)
 		}
 	}
 }

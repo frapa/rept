@@ -14,7 +14,7 @@ docker build . -f Dockerfile_plain \
     -t frapasa/rept:$major.$minor.$patch > /dev/null
 
 echo "Pushing plain image..."
-# docker image push --all-tags frapasa/rept
+docker image push --all-tags frapasa/rept
 
 echo "Building debian image..."
 docker build . -f Dockerfile_debian \
@@ -24,6 +24,6 @@ docker build . -f Dockerfile_debian \
     -t frapasa/rept:$major.$minor.$patch-buster > /dev/null
 
 echo "Pushing debian image..."
-# docker image push --all-tags frapasa/rept
+docker image push --all-tags frapasa/rept
 
 echo "Success!"
