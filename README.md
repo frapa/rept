@@ -25,6 +25,7 @@ Install latest release with:
 
 ```bash
 curl -o /usr/local/bin/rept -L https://github.com/frapa/rept/releases/latest/download/rept
+chmod +x /usr/local/bin/rept
 ```
 
 Then run it with:
