@@ -123,7 +123,7 @@ I provide two docker images with `rept` pre-installed:
 For both images, the configuration will be read from
 `/etc/rept/rept.toml`.
 
-To learn more, please visit [Docker Hub](https://hub.docker.com/repository/docker/frapasa/rept).
+To learn more, please visit [Docker Hub](https://hub.docker.com/r/frapasa/rept).
 
 ## Motivation
 
